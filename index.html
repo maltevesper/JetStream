@@ -17,13 +17,13 @@ layout: page
         <span class="post-meta">{{ post.date | date: "%-d %b %Y" }}</span>
 
         <h1>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+          <a class="post-link" href="{{ post.url | prepend: site.github.url }}">{{ post.title }}</a>
         </h1>
         <article>{{ post.content }}</article>
       </li>
     {% endfor %}
   </ul>
   
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.github.url }}">via RSS</a></p>
 
 </div>
