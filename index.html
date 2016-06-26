@@ -1,0 +1,29 @@
+---
+title: JetStream
+layout: page
+---
+
+<div class="home">
+
+  JetStream is a PCIe library for FPGA's that comes with batteries included. While you are free to customise the hardware and replace modules with your own, getting started is as simple as installing a driver and running one of the example designs on your FPGA.
+  
+  We provide full [documentation](documentation) and [many examples](). We hope that we soon can reference a lot of projects using JetStream. Please [drop us a line](contact) when you use JetStream. We are happy about any feedback, feature requests or to hear about your applications.
+
+  <h1 class="page-heading">Latest News</h1>
+
+  <ul class="post-list">
+    {% for post in site.posts limit:1 %}
+      <li>
+        <span class="post-meta">{{ post.date | date: "%-d %b %Y" }}</span>
+
+        <h1>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </h1>
+        <article>{{ post.content }}</article>
+      </li>
+    {% endfor %}
+  </ul>
+  
+  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+
+</div>

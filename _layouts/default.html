@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  {% include head.html %}
+  <body>
+    <div class="navContainer">
+      <header>
+<!--        <img src="img/jetStream_logo_header.png"> -->
+        <a href="{{ site.baseurl }}/"><img class="center-block" src="{{ site.baseurl }}/img/jetStream_logo_92.png"></a>
+      </header>
+      <nav>
+      <a href="{{ site.baseurl }}/">JetStream</a>
+      <a href="{{ site.baseurl }}/news">News</a>
+      <a href="{{ site.baseurl }}/gettingstarted">Getting Started</a>
+      <a href="{{ site.baseurl }}/documentation">Documentation</a>
+      <a href="{{ site.baseurl }}/downloads">Downloads</a>
+      <a href="{{ site.baseurl }}/publications">Publications</a>
+      </nav>      
+      <div class="sponsor">
+	sponsors<br />
+        <a href="https://www.manchester.ac.uk"><img src="{{ site.baseurl }}/img/uniManchester.png"></a><br />
+        <a href="https://www.gov.uk/dstl"><img src="{{ site.baseurl }}/img/dstl_height.png"></a>
+     </div>
+     <div class="spacer">
+     </div>
+     <footer>
+        <a href="contact">Contact</a>
+      </footer>
+    </div>
+    <main>
+      {{ content }}
+    </main>
+  </body>
+</html>

@@ -1,0 +1,43 @@
+---
+title: Getting Started
+layout: page
+permalink: /gettingstarted
+---
+
+JetStream has two parts, hardware and software. While you need both to use the system, it is enough to install the software when you get a bitstream. In all other cases you need to install both. This quickstart guide should get you jumpstarted. However, if you have trouble check the README file of the corresponding repository as these contain the latest information and additional tips for troubleshooting.
+
+<h2>Software installation</h2>
+
+First of you have to install the dependencies:
+
+<ul>
+  <li>Boost program options</li>
+  <li>Boost program options development headers</li>
+  <li>CMake &ge; 2.8.12</li>
+  <li>make</li>
+  <li>Linux Kernel &ge; 3.3</li>
+  <li>Linux Kernel headers</li>
+</ul>
+
+Chances are you are already running a Kernel &ge; 3.3, as of writing CentOS ships with 3.10. The rest should be available as packages, the package names on CentOS would be <code>cmake3 boost boost-devel kernel-devel</code> (you can try to be specific: <code>boost-program-options</code>). For CentOS you will have to replace <code>cmake</code> by <code>cmake3</code> in the following to use a recent enough version.
+
+Now you can check out the git repository {% include github.html username=site.github_username  repository="JetStream-driver"%}.
+
+<div class="code">git clone https://github.com/maltevesper/JetStream-driver.git</div>
+
+After your checkout completes you have to create a build directory and generate the makefiles:
+
+<div class="code">cd JetStream-driver
+mkdir build
+cd build
+cmake -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_BUILD_TYPE=Release ..</div>
+
+You have now completed the onetime setup required, you do not have to repeat the above steps in the future. All that is left is to build and install the library  and the driver:
+
+<div class="code">make
+sudo make install</div>
+
+If you make changes to the driver or the user library you will have to repeat the last two steps above. If you plan to work a lot on the driver or the userlibrary, it is worthwhile noting that there are individual build targets. The targets are <code>driver</code>, <code>install-driver</code>, <code>fpga</code>, <code>install-fpga</code>, <code>fpga++</code>, <code>install-fpga++</code>. They build/install the driver, the C-library, or the C++-library respectivley.
+
+<h2>Hardware</h2>
+To get the hardware, simply checkout {% include github.html username=site.github_username  repository="JetStream-hardware"%} and open the contained project with Vivado 2015.4. While we intend to port to Vivado 2016 this work is currently hindred by a regression in Vivado, causing the synthesis to fail.
