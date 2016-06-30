@@ -64,6 +64,7 @@ body {
 main {
     margin-left: 275px;
     padding: 1em;
+    max-width: 55em;
 }
 
 ul.publications {
