@@ -12,7 +12,7 @@ description: > # this means to ignore newlines until "baseurl:"
   JetStream - a PCIe FPGA solution with host-to-FPGA and FPGA-to_FPGA communication.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://yourdomain.com" # the base hostname & protocol for your site
-github_username:  maltevesper
+github_username: maltevesper
 
 # Build settings
 markdown: kramdown
